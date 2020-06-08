@@ -4,7 +4,7 @@ fi
 certbot certonly \
         --config-dir "${LETSENCRYPT_DIR:-/etc/letsencrypt}" \
 		--agree-tos \
-		--domains "$DOMAIN" \
+		--domains "$DOMAIN" -d "$WWWDOMAIN" \
 		--email "$EMAIL" \
 		--expand \
 		--noninteractive \
